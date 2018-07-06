@@ -16,6 +16,7 @@ directories:
 before_script:
 - npm install -g --silent @angular/cli
 
+# --prod for a production build
 script:
 - ng build --prod
 
