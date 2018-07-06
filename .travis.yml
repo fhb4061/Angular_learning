@@ -5,7 +5,19 @@ addons:
   chrome: stable
 
 language: node_js
+node_js: "8"
 
 cache:
 directories:
 - ./node_modules
+
+before_script:
+- npm install -g --silent @angular/cli
+
+script:
+- ng build --prod
+
+notifications:
+email:
+on_failure: change
+on_success: change
