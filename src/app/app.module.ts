@@ -8,13 +8,15 @@ import { SearchCityComponent } from './search-city/search-city.component';
 import { DetailsComponent } from './details/details.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     SearchCityComponent,
-    DetailsComponent
+    DetailsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
