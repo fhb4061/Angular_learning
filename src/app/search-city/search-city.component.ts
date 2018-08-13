@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-search-city',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCityComponent implements OnInit {
 
-  constructor() { }
+  posts: Object;
+
+  constructor(private data: DataService) {
+  }
 
   ngOnInit() {
+    this.data.getPosts().subscribe(
+      data => this.posts = data
+
+    )
   }
 
 }

@@ -6,7 +6,7 @@ import { UserComponent } from './user/user.component'
 //define array of routes
 const routes: Routes = [
   {
-    path: 'search',
+    path: '',
     component: SearchCityComponent
   },
   {
