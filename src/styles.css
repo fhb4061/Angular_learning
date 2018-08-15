@@ -3,8 +3,55 @@ body,html{
     height: 100%;
 }
 
+h1{
+    color: #281385;
+}
+
 #content{
     margin-left: 15%;
-    padding: 1px 16px;
-    height: 100%;
+    padding: 10px 16px;
 }
+
+#container{
+    background-color: rgb(202, 196, 196);
+}
+
+ul{
+    padding: 1px;
+    margin: 5px;
+    list-style-type: none;
+    background-color: rgb(202, 196, 196);
+}
+
+/* this is the whole list Parent list */
+li{
+    color: rgb(117, 115, 115);
+    border: 1px #131212 solid;
+    border-radius: 15px;
+    padding: 4px;
+    margin: 2px;
+}
+
+/* contents */
+li li{
+    border: none;
+}
+
+/* link within the first list tag */
+li a{
+    color: rgb(117, 115, 115);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li a:hover{
+    color: #1b1e3d;
+}
+/* unordered list  within a list */
+li ul li{
+    padding: 0px;
+}
+
+/* it is best that you use the classes and id to format your CSS.
+Why? Because if you edit the tag, you will be affecting all the 
+tags globally */
