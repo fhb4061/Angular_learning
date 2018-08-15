@@ -1,6 +1,6 @@
 <h1>Users</h1>
 
-<ul [@listStagger]="users$">
+<ul [@listStagger]="users$" id = "content">
   <li *ngFor="let user of users$"> <!-- allow you to iterate an array of objects -->
     <a routerLink = "/details/{{user.id}}">{{ user.name }}</a>
     
