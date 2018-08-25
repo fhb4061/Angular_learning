@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
+import { trigger,style,transition,animate,query,stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-user',

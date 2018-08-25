@@ -1,9 +1,9 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchCityComponent} from './search-city/search-city.component';
 import { DetailsComponent } from './details/details.component';
-import { UserComponent } from './user/user.component'
-//define array of routes
+import { UserComponent } from './user/user.component';
+// define array of routes
 const routes: Routes = [
   {
     path: '',

@@ -1,1 +1,33 @@
-
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
+    steps:
+    # Checkout the code from the branch into the working_directory
+      - checkout
+    # Log the current branch
+      - run:
+          name: Show current branch
+          command: echo ${master}
+    # Restore local dependencies from cache
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        - v1-dependencies-
+    # Install project dependencies
+    - run:
+        name: Install loca dependencies
+        command: npm install
+    # Cache local dependencies if they don't exist
+    - save_cache:
+        key: v1-dependencies-{{ checksum "package.json" }}
+        paths:
+          - node_modules
+    #
+    
